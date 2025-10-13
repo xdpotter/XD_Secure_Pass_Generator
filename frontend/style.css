@@ -1,0 +1,34 @@
+:root{--bg:#f6f9fc;--card:#ffffff;--text:#0b1220;--muted:#44546b;--accent:#2B6CB0}
+[data-theme="dark"]{--bg:#071028;--card:#071730;--text:#e6eef8;--muted:#9aa7bf;--accent:#7dd3fc}
+*{box-sizing:border-box}
+body{margin:0;font-family:Inter,system-ui,Segoe UI,Roboto,Arial;background:var(--bg);color:var(--text);min-height:100vh;display:flex;flex-direction:column}
+.site-header{display:flex;justify-content:space-between;align-items:center;padding:12px 20px;background:transparent}
+.brand{display:flex;gap:10px;align-items:center}
+.logo{width:48px;height:48px}
+h1{margin:0;font-size:1.1rem}
+.nav a{margin-left:12px;text-decoration:none;color:var(--muted)}
+.container{max-width:920px;margin:18px auto;padding:0 18px;flex:1}
+.card{background:var(--card);border-radius:12px;padding:18px;box-shadow:0 6px 20px rgba(2,6,23,0.06)}
+.output-row{display:flex;gap:8px;margin-bottom:12px}
+#passwordOutput{flex:1;padding:10px;border-radius:8px;border:1px solid rgba(0,0,0,0.06)}
+button{padding:10px 12px;border-radius:8px;border:none;background:var(--accent);color:white;cursor:pointer}
+.controls{display:flex;gap:8px;flex-wrap:wrap;margin-bottom:12px;align-items:center}
+.controls label{font-size:0.92rem;color:var(--muted)}
+.actions{display:flex;gap:8px;justify-content:flex-end;margin-bottom:12px}
+.primary{background:#1e40af}
+.strength{height:14px;background:rgba(0,0,0,0.05);border-radius:8px;overflow:hidden;margin-bottom:12px;position:relative}
+.strength .bar{height:100%;width:0%;background:linear-gradient(90deg,#ff3b3b,#ffb86b,#7cffb2);transition:width .25s}
+.details summary{cursor:pointer}
+.history-actions{display:flex;gap:8px;justify-content:flex-end;margin-top:8px}
+.site-footer{display:flex;justify-content:space-between;align-items:center;margin-top:18px;color:var(--muted);font-size:0.9rem}
+a{color:var(--accent)}
+@media (max-width:640px){.nav{display:none}.actions{flex-direction:column}button{width:100%}}
+/* Fix background for standalone pages */
+html, body {
+  background: var(--bg);
+}
+
+main.container {
+  background: var(--bg);
+  min-height: 80vh;
+}
