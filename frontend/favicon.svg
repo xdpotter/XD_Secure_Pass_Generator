@@ -1,8 +1,0 @@
-<svg width="64" height="64" viewBox="0 0 64 64" fill="none" xmlns="http://www.w3.org/2000/svg">
-<rect width="64" height="64" rx="12" fill="#2C3E50"/>
-<text x="10" y="47" font-family="Arial, sans-serif" font-size="36" font-weight="bold" fill="#3498DB">X</text>
-<text x="35" y="47" font-family="Arial, sans-serif" font-size="36" font-weight="bold" fill="#E74C3C">D</text>
-<!-- <path d="M32 20C32 18.3431 33.3431 17 35 17C36.6569 17 38 18.3431 38 20V24H32V20Z" fill="#F1C40F"/>
-<path d="M32 24V28H38V24H32Z" fill="#2ECC71"/> 
-<circle cx="35" cy="25" r="2" fill="#2C3E50"/> -->
-</svg>
