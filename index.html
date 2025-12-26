@@ -1,0 +1,281 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>XD Secure Pass – Free Password Generator</title>
+<meta name="description" content="Generate strong, secure passwords online for free.">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="style.css">
+
+<!-- Google AdSense (ADD AFTER APPROVAL) -->
+<!--
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"
+data-ad-client="ca-pub-XXXXXXXX"></script>
+-->
+</head>
+
+<body>
+
+<header>
+  <!-- <button id="darkToggle" class="dark-toggle">
+  🌙 Dark Mode
+</button> -->
+
+    <h2>🔐 XD Secure Pass</h2>
+  <nav>
+    <a href="index.html">Home</a>
+    <a href="blog1.html">Blog</a>
+    <a href="about.html">About</a>
+    <a href="privacy.html">Privacy</a>
+    <a href="terms.html">Terms</a>
+    <a href="contact.html">Contact</a>
+  </nav>
+</header>
+
+<!-- AD PLACEHOLDER (TOP BANNER) -->
+<!-- <div class="ad-box">Advertisement</div> -->
+
+<main class="container">
+
+<h1>Free Secure Password Generator</h1>
+<p>Create strong, random passwords to protect your online accounts.</p>
+
+<div class="generator-box">
+  <input type="text" id="password" placeholder="Generated password" readonly>
+
+  <!-- Options -->
+<div class="options-box">
+
+  <label class="option">
+    <span>Password Length</span>
+    <input type="number" id="length" value="12" min="6" max="32">
+  </label>
+
+  <label class="option">
+    <input type="checkbox" id="uppercase" checked>
+    Uppercase Letters (A–Z)
+  </label>
+
+  <label class="option">
+    <input type="checkbox" id="lowercase" checked>
+    Lowercase Letters (a–z)
+  </label>
+
+  <label class="option">
+    <input type="checkbox" id="numbers" checked>
+    Numbers (0–9)
+  </label>
+
+  <label class="option">
+    <input type="checkbox" id="symbols">
+    Symbols (!@#$%^&)
+  </label>
+
+  <label class="option">
+    <input type="checkbox" id="noSimilar">
+    Avoid Similar Characters (O, 0, l, 1)
+  </label>
+
+  <label class="option">
+    <input type="checkbox" id="noRepeat">
+    No Repeating Characters
+  </label>
+
+</div>
+
+  <div class="button-group">
+  <button class="btn primary" onclick="generatePassword()">Generate Password</button>
+  <button class="btn secondary" onclick="copyPassword()">Copy</button>
+  <button class="btn outline" onclick="downloadPassword()">Download</button>
+</div>
+
+<p id="message" class="message"></p>
+
+
+
+<div class="strength-box">
+  <div class="strength-head">
+    <span>Password Strength</span>
+    <strong id="strengthText">—</strong>
+  </div>
+
+  <div class="strength-meter">
+    <div id="strengthBar"></div>
+  </div>
+
+  <p id="entropyText">Entropy: 0 bits</p>
+
+  <canvas id="entropyChart" height="80"></canvas>
+</div>
+
+</div>
+
+
+<!-- AD PLACEHOLDER (MID CONTENT) -->
+<!-- <div class="ad-box">Advertisement</div> -->
+
+<section class="content-box">
+
+  <h2>🔐 What Is a Password Generator?</h2>
+  <p>
+    A password generator is an online tool that creates strong, random passwords
+    to protect your online accounts from hacking, data breaches, and unauthorized access.
+    Weak passwords are one of the most common reasons accounts get compromised.
+  </p>
+
+  <p>XD Secure Pass generates passwords that are:</p>
+  <ul>
+    <li>Random</li>
+    <li>Hard to guess</li>
+    <li>Resistant to brute-force attacks</li>
+    <li>Suitable for email, social media, banking, and work accounts</li>
+  </ul>
+
+  <h2>🛡️ Why Strong Passwords Matter</h2>
+  <p>
+    Using the same or weak password across multiple websites can put all your accounts at risk.
+    Hackers often use automated tools to crack simple passwords in seconds.
+  </p>
+
+  <ul>
+    <li>Prevent identity theft</li>
+    <li>Protect personal and financial data</li>
+    <li>Reduce hacking risks</li>
+    <li>Improve overall online security</li>
+  </ul>
+
+  <h2>⚙️ How XD Secure Pass Works</h2>
+  <p>
+    XD Secure Pass uses client-side JavaScript to generate passwords directly in your browser.
+  </p>
+
+  <ul>
+    <li>✔ No passwords are sent to any server</li>
+    <li>✔ No data is stored online</li>
+    <li>✔ Everything happens on your device</li>
+    <li>✔ Fully private and secure</li>
+  </ul>
+
+  <h2>✨ Features of XD Secure Pass</h2>
+  <ul>
+    <li>Generate random secure passwords instantly</li>
+    <li>Customize password length</li>
+    <li>Include uppercase, lowercase, numbers, and symbols</li>
+    <li>Copy password with one click</li>
+    <li>Download password as a text file</li>
+    <li>Save password history locally (browser only)</li>
+    <li>100% free and easy to use</li>
+  </ul>
+
+  <h2>🔒 Is XD Secure Pass Safe to Use?</h2>
+  <p>
+    Yes. XD Secure Pass does not collect, store, or transmit your passwords.
+    All password generation happens locally in your browser.
+  </p>
+  <p>
+    We do not track users or store passwords on servers.
+    This makes XD Secure Pass completely safe for everyday use.
+  </p>
+
+  <h2>📌 When Should You Use a Password Generator?</h2>
+  <ul>
+    <li>Creating a new online account</li>
+    <li>Updating old or weak passwords</li>
+    <li>Securing work or business accounts</li>
+    <li>Managing multiple social media profiles</li>
+    <li>Protecting sensitive data</li>
+  </ul>
+
+  <h2>❓ Frequently Asked Questions (FAQ)</h2>
+
+  <p><strong>Is this password generator free?</strong><br>
+  Yes, XD Secure Pass is 100% free with no limitations.</p>
+
+  <p><strong>Are generated passwords stored online?</strong><br>
+  No. Passwords are generated locally and stored only in your browser if you choose to save them.</p>
+
+  <p><strong>Can I use these passwords for banking?</strong><br>
+  Yes. Generated passwords are strong and suitable for banking and financial accounts.</p>
+
+  <p><strong>Do I need to install anything?</strong><br>
+  No installation required. XD Secure Pass works directly in your web browser.</p>
+
+</section>
+
+
+</main>
+
+<footer class="site-footer">
+
+  <div class="footer-grid">
+
+    <div>
+      <h4>XD Secure Pass</h4>
+      <p>
+        Free, secure, and privacy-focused password generator.
+        All passwords are generated locally in your browser.
+      </p>
+    </div>
+
+    <div>
+      <h4>Tools</h4>
+      <ul>
+        <li><a href="/">Password Generator</a></li>
+        <li><a href="/blog1.html">Password Security Blog</a></li>
+        <li>
+      <a href="https://xworldclock.netlify.app" target="_blank">
+       X World Clock
+      </a>
+    </li>
+      </ul>
+    </div>
+
+    <div>
+      <h4>Company</h4>
+      <ul>
+        <li><a href="/about.html">About Us</a></li>
+        <li><a href="/contact.html">Contact</a></li>
+        <li><a href="/privacy.html">Privacy Policy</a></li>
+        <li><a href="/terms.html">Terms & Conditions</a></li>
+      </ul>
+    </div>
+
+    <div>
+      <h4>Connect</h4>
+      <ul>
+        <li><a href="mailto:xdpotter@gmail.com">Email</a></li>
+      </ul>
+    </div>
+
+  </div>
+
+  <div class="footer-bottom">
+    © <span id="year"></span> XD Secure Pass Generator • Created by XDPOTTER
+  </div>
+
+</footer>
+
+<script>
+document.getElementById("year").textContent = new Date().getFullYear();
+</script>
+
+
+<script src="script.js"></script>
+<script>
+const toggle = document.getElementById("darkToggle");
+
+if (localStorage.getItem("theme") === "dark") {
+  document.body.classList.add("dark");
+}
+
+toggle.onclick = () => {
+  document.body.classList.toggle("dark");
+  localStorage.setItem(
+    "theme",
+    document.body.classList.contains("dark") ? "dark" : "light"
+  );
+};
+</script>
+
+</body>
+</html>
