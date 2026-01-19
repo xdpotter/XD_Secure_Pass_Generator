@@ -204,6 +204,52 @@ header nav a {
     font-size: 0.95rem;
 }
 
+.btn-primary,
+.btn-secondary {
+  display: inline-block;
+  padding: 12px 20px;
+  margin: 10px;
+  border-radius: 6px;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+.btn-primary {
+  background: #0a2540;
+  color: white;
+}
+
+.btn-secondary {
+  background: #e0e0e0;
+  color: #333;
+}
+
+.blog-image {
+  width: 100%;
+  border-radius: 10px;
+  margin-bottom: 20px;
+}
+
+.blog-cta {
+  margin-top: 30px;
+  text-align: center;
+}
+
+/* .creator-box {
+  display: flex;
+  gap: 20px;
+  align-items: center;
+  margin-top: 30px;
+} */
+
+.creator-image {
+  width: 120px;
+  height: 120px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 3px solid #0a2540;
+}
+
 /* Table Styling */
 .table-container { overflow-x: auto; margin: 20px 0; }
 table { width: 100%; border-collapse: collapse; background: var(--card); }

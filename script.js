@@ -93,3 +93,92 @@ function calculateEntropy(pwd, poolSize) {
 
     text.innerText = `${label} - ${entropy} bits ${description}`;
 }
+
+//Normal Export
+
+// function downloadPassword() {
+//   const passwordField = document.getElementById("password");
+//   const password = passwordField.value;
+
+//   if (!password) {
+//     alert("Please generate a password first.");
+//     return;
+//   }
+
+//   const blob = new Blob([password], { type: "text/plain" });
+//   const url = URL.createObjectURL(blob);
+
+//   const a = document.createElement("a");
+//   a.href = url;
+//   a.download = "xd-secure-password.txt";
+//   document.body.appendChild(a);
+//   a.click();
+
+//   document.body.removeChild(a);
+//   URL.revokeObjectURL(url);
+// }
+
+//Designed export
+
+function downloadPassword() {
+  const password = document.getElementById("password").value;
+  const length = document.getElementById("length").value;
+
+  if (!password) {
+    alert("Please generate a password first.");
+    return;
+  }
+
+  const options = [];
+  if (document.getElementById("uppercase").checked) options.push("Uppercase");
+  if (document.getElementById("lowercase").checked) options.push("Lowercase");
+  if (document.getElementById("numbers").checked) options.push("Numbers");
+  if (document.getElementById("symbols").checked) options.push("Symbols");
+
+  const now = new Date();
+  const timestamp = now.toISOString().replace("T", " ").split(".")[0];
+
+  const content = `
+========================================
+🔐 XD SECURE PASS — PASSWORD EXPORT
+========================================
+
+Generated Password:
+-------------------
+${password}
+
+Password Length: ${length}
+Character Set  : ${options.join(", ")}
+Entropy Level  : Strong
+
+Security Tips:
+--------------
+• Never share this password with anyone
+• Do not reuse passwords across websites
+• Enable 2FA wherever possible
+• Store passwords in a trusted password manager
+
+Generated On:
+-------------
+${timestamp}
+
+Generated Locally in Your Browser
+No data was stored or transmitted.
+
+========================================
+© XD Secure Pass Generator | XDPOTTER
+========================================
+`;
+
+  const blob = new Blob([content.trim()], { type: "text/plain" });
+  const url = URL.createObjectURL(blob);
+
+  const a = document.createElement("a");
+  a.href = url;
+  a.download = `xd-secure-password-${Date.now()}.txt`;
+  document.body.appendChild(a);
+  a.click();
+
+  document.body.removeChild(a);
+  URL.revokeObjectURL(url);
+}
