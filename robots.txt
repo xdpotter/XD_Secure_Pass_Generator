@@ -2,5 +2,4 @@ User-agent: *
 Allow: /
 Disallow: /private/
 
-# Sitemaps help search engines find your content
 Sitemap: https://xdsecurepassgenerator.netlify.app/sitemap.xml
